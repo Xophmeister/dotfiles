@@ -1,6 +1,6 @@
 My configuration files, as I migrate from Windows to *nix, via Cygwin!
 
-**Restore Script**
+**Synchronisation Script**
 
 * install.sh
 
