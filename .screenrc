@@ -1,4 +1,4 @@
 startup_message off
 
 hardstatus alwayslastline
-hardstatus string "%{= g} %{= w}%-Lw%{=r}%n%f* %t%{-}%+LW"
+hardstatus string '%{= kG}%{G}%H%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{b}%C%a%{g}'
