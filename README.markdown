@@ -2,7 +2,7 @@ My configuration files, as I migrate from Windows to *nix, via Cygwin!
 
 **Synchronisation Script**
 
-* install.sh
+* sync 
 
 **Vim**
 
