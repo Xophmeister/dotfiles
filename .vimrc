@@ -1,17 +1,23 @@
 set nocompatible
+syntax enable
+
+call pathogen#infect()
 
 if has("gui_running")
   if has("gui_win32")
     set guifont=Consolas:h10:cANSI
   endif
   
-  colorscheme wombat
   set guioptions=mLrbtT
 else
   set t_Co=256
-  colorscheme wombat256
+  let g:solarized_termcolors=256
 endif
 
+set background=dark
+colorscheme solarized
+
+set ruler
 set number
 set nowrap
 set spell spelllang=en_gb

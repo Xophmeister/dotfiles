@@ -8,6 +8,9 @@ My configuration files, as I migrate from Windows to *nix, via Cygwin!
 
 * .vimrc
 * .vim/
+  * [vim-pathogen](https://github.com/tpope/vim-pathogen)
+  * [vim-fugitive](https://github.com/tpope/vim-fugitive)
+  * [vim-colors-solarized](https://github.com/altercation/solarized)
 
 **Z Shell**
 

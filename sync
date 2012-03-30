@@ -13,15 +13,15 @@ cd ~
 
 # Archive: Find clashes and tarball+gzip them
 for i in ${dotFiles[*]}; do
-	toArchive=(${toArchive[@]} `ls -d $i`)
+  toArchive=(${toArchive[@]} `ls -d $i`)
 done
 if [ ${#toArchive[*]} != 0 ]; then
-	archiveFile="dotfiles"`date +%Y%m%d`".tar.gz"
-	tar czf $archiveFile ${toArchive[*]} --remove-files
+  archiveFile="dotfiles"`date +%Y%m%d`".tar.gz"
+  tar czf $archiveFile ${toArchive[*]} --remove-files
 fi
 
 # Create symlinks
 for i in ${dotFiles[*]}; do
-	dotFileLink="dotfiles/"$i
-	ln -s $dotFileLink $i
+  dotFileLink="dotfiles/"$i
+  ln -s $dotFileLink $i
 done
