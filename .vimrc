@@ -17,7 +17,6 @@ endif
 set background=dark
 colorscheme solarized
 
-set ruler
 set number
 set nowrap
 set spell spelllang=en_gb
@@ -38,5 +37,6 @@ set ar
 set si
 
 set encoding=utf-8
+set laststatus=2
 
 filetype plugin on
