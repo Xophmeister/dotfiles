@@ -11,6 +11,7 @@ My configuration files, as I migrate from Windows to *nix, via Cygwin!
 
 **Z Shell**
 
+* .zprofile
 * .zshrc
 * [.oh-my-zsh/](https://github.com/robbyrussell/oh-my-zsh)
 
