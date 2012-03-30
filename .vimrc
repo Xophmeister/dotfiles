@@ -38,5 +38,10 @@ set si
 
 set encoding=utf-8
 set laststatus=2
+let g:Powerline_symbols='fancy'
 
 filetype plugin on
+
+if has("python")
+  nnoremap <F5> :GundoToggle<CR>
+endif  
