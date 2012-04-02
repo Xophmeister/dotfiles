@@ -6,8 +6,8 @@
 set -e
 set -u
 
-# All dot files apart from .git, . and ..
-dotFiles=$(ls -da .* | grep -Pxv '\.git|\.+'`)
+# All dot files apart from .git*, . and ..
+dotFiles=$(ls -da .* | grep -Pxv '\.git.*|\.+')
 
 # Existing dot files to archive
 toArchive=''
