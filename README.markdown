@@ -8,13 +8,16 @@ My configuration files, as I migrate from Windows to *nix, via Cygwin!
 
 * .vimrc
 * .vim/
-  * [vim-pathogen](https://github.com/tpope/vim-pathogen)
-  * [vim-fugitive](https://github.com/tpope/vim-fugitive)
-  * [vim-powerline](https://github.com/Lokaltog/vim-powerline)
   * [Gundo](http://sjl.bitbucket.org/gundo.vim/)
+  * [NERDCommenter](https://github.com/scrooloose/nerdcommenter) (not fully set up yet...)
+  * [NERDTree](https://github.com/scrooloose/nerdtree) (not fully set up yet...)
+  * [Supertab](https://github.com/ervandew/supertab) (not fully set up yet...)
   * [Tabular](https://github.com/godlygeek/tabular)
-  * [vim-gnupg](http://gitorious.org/vim-gnupg)
   * [vim-colors-solarized](https://github.com/altercation/solarized)
+  * [vim-fugitive](https://github.com/tpope/vim-fugitive)
+  * [vim-gnupg](http://gitorious.org/vim-gnupg)
+  * [vim-pathogen](https://github.com/tpope/vim-pathogen)
+  * [vim-powerline](https://github.com/Lokaltog/vim-powerline)
 
 **Z Shell**
 

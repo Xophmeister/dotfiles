@@ -30,18 +30,26 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab 
 set autoindent
+set smartindent
 
+set scrolloff=2
 set cursorline
 
-set ar
-set si
+set autoread
+set backspace=indent,eol,start
+set mouse=a
 
 set encoding=utf-8
 set laststatus=2
 let g:Powerline_symbols='fancy'
 
+let g:SuperTabSetDefaultCompletionType='context'
+
 filetype plugin on
 
 if has("python")
-  nnoremap <F5> :GundoToggle<CR>
-endif  
+  nnoremap <F11> :GundoToggle<CR>
+endif
+
+let g:NERDTreeMinimalUI=1
+nnoremap <F12> :NERDTreeToggle<CR>
