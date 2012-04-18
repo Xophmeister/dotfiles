@@ -24,6 +24,7 @@ set cc=72
 set hlsearch
 set incsearch
 set wildmenu
+set showcmd
 
 set tabstop=2
 set softtabstop=2
