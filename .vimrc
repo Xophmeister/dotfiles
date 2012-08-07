@@ -46,6 +46,10 @@ let g:Powerline_symbols='fancy'
 
 let g:SuperTabSetDefaultCompletionType='context'
 
+let g:html_indent_inctags = "html,body,head,tbody"
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc"
+
 filetype plugin on
 
 if has("python")
