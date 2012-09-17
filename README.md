@@ -1,10 +1,16 @@
-My configuration files, as I migrate from Windows to *nix, via Cygwin!
+# Dotfiles, Oo-oo!
 
-**Synchronisation Script**
+My configuration files, as I migrate from Windows to \*nix, via Cygwin!
+
+## Synchronisation Script
 
 * sync 
 
-**Vim**
+## Git
+
+* .global-ignore.git
+
+## Vim
 
 * .vimrc
 * .vim/
@@ -18,15 +24,16 @@ My configuration files, as I migrate from Windows to *nix, via Cygwin!
   * [vim-colors-solarized](https://github.com/altercation/solarized)
   * [vim-fugitive](https://github.com/tpope/vim-fugitive)
   * [vim-gnupg](http://gitorious.org/vim-gnupg)
+  * [vim-markdown](https://github.com/tpope/vim-markdown)
   * [vim-pathogen](https://github.com/tpope/vim-pathogen)
   * [vim-powerline](https://github.com/Lokaltog/vim-powerline)
 
-**Z Shell**
+## Z Shell
 
 * .zprofile
 * .zshrc
 * [.oh-my-zsh/](https://github.com/robbyrussell/oh-my-zsh)
 
-**GNU Screen**
+## GNU Screen**
 
 * .screenrc
