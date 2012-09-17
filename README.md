@@ -4,16 +4,25 @@ My configuration files, as I migrate from Windows to \*nix, via Cygwin!
 
 ## Synchronisation Script
 
-* sync 
+* sync
+
+Run `./sync` from `~/dotfiles` to tarball all the clashing dotfiles in
+`~/`, then symlink to the ones in this repository.
 
 ## Git
 
 * .global-ignore.git
 
+`.git*` files are ignored by the synchronisation script, so we use an
+alternative naming convention for Git dotfiles. We don't include
+`.gitconfig` because it contains sensitive data.
+
+TODO Update synchronisation script to generate `.gitconfig`
+
 ## Vim
 
 * .vimrc
-* .vim/
+* Plugins, etc.
   * [Gundo](http://sjl.bitbucket.org/gundo.vim/)
   * [NERDCommenter](https://github.com/scrooloose/nerdcommenter) TODO
   * [NERDTree](https://github.com/scrooloose/nerdtree) TODO
@@ -34,6 +43,6 @@ My configuration files, as I migrate from Windows to \*nix, via Cygwin!
 * .zshrc
 * [.oh-my-zsh/](https://github.com/robbyrussell/oh-my-zsh)
 
-## GNU Screen**
+## GNU Screen
 
 * .screenrc
