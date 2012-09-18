@@ -33,6 +33,7 @@ TODO Update synchronisation script to generate `.gitconfig`
   * [vim-colors-solarized](https://github.com/altercation/solarized)
   * [vim-fugitive](https://github.com/tpope/vim-fugitive)
   * [vim-gnupg](http://gitorious.org/vim-gnupg)
+  * [vim-latex](http://vim-latex.sourceforge.net) TODO
   * [vim-markdown](https://github.com/tpope/vim-markdown)
   * [vim-pathogen](https://github.com/tpope/vim-pathogen)
   * [vim-powerline](https://github.com/Lokaltog/vim-powerline)
