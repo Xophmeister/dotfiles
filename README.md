@@ -1,6 +1,6 @@
 # Dotfiles, Oo-oo!
 
-My configuration files, as I migrate from Windows to \*nix, via Cygwin!
+Install with `git clone --recursive`, to also download submodules.
 
 ## Synchronisation Script
 
@@ -9,15 +9,25 @@ My configuration files, as I migrate from Windows to \*nix, via Cygwin!
 Run `./sync` from `~/dotfiles` to tarball all the clashing dotfiles in
 `~/`, then symlink to the ones in this repository.
 
+TODO
+* This needs to be fixed to work with zsh
+* Sync the private dotfiles
+
+## Private Dotfiles
+
+`private` is ignored by Git, but contains things like `.ssh`, `.gnupg`,
+`.gitconfig`, etc.
+
+TODO
+* Make this a submodule and push to a *private* repo
+
 ## Git
 
 * .global-ignore.git
 
 `.git*` files are ignored by the synchronisation script, so we use an
-alternative naming convention for Git dotfiles. We don't include
-`.gitconfig` because it contains sensitive data.
-
-TODO Update synchronisation script to generate `.gitconfig`
+alternative naming convention for Git dotfiles. We put `.gitconfig` in
+the private directory.
 
 ## Vim
 
