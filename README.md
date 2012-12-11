@@ -9,8 +9,6 @@
 The contents of the `private` directory is ignored by Git, but contains
 things like `.ssh`, `.gnupg`, `.gitconfig`, etc.
 
-TODO Make this a submodule and push to a *private* repo.
-
 ## Public Dotfiles
 
 ### Git
