@@ -1,35 +1,23 @@
 # Dotfiles, Oo-oo!
 
-Install with `git clone --recursive`, to also download submodules.
-
-## Synchronisation Script
-
-* sync
-
-Run `./sync` from `~/dotfiles` to tarball all the clashing dotfiles in
-`~/`, then symlink to the ones in this repository.
-
-TODO
-* This needs to be fixed to work with zsh
-* Sync the private dotfiles
+* Install with `git clone --recursive` to also download submodules.
+* Run `./sync` to tarball any clashes before symlinking to the dotfiles
+  in the `public` and `private` directories.
 
 ## Private Dotfiles
 
-`private` is ignored by Git, but contains things like `.ssh`, `.gnupg`,
-`.gitconfig`, etc.
+The contents of the `private` directory is ignored by Git, but contains
+things like `.ssh`, `.gnupg`, `.gitconfig`, etc.
 
-TODO
-* Make this a submodule and push to a *private* repo
+TODO Make this a submodule and push to a *private* repo.
 
-## Git
+## Public Dotfiles
 
-* .global-ignore.git
+### Git
 
-`.git*` files are ignored by the synchronisation script, so we use an
-alternative naming convention for Git dotfiles. We put `.gitconfig` in
-the private directory.
+* .gitignore-global
 
-## Vim
+### Vim
 
 * .vimrc
 * Plugins, etc.
@@ -48,12 +36,14 @@ the private directory.
   * [vim-pathogen](https://github.com/tpope/vim-pathogen)
   * [vim-powerline](https://github.com/Lokaltog/vim-powerline)
 
-## Z Shell
+### Z Shell
 
 * .zprofile
 * .zshrc
 * [.oh-my-zsh/](https://github.com/robbyrussell/oh-my-zsh)
 
-## GNU Screen
+### GNU Screen
 
 * .screenrc
+
+TODO Migrate to tmux?...

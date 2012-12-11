@@ -1,0 +1,8 @@
+startup_message off
+
+hardstatus alwayslastline
+hardstatus string "%{= Wk}%-w%{= Bw}%n %t%{-}%+w %-="
+
+vbell off
+term screen-256color
+altscreen on

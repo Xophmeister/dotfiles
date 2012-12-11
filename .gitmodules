@@ -1,48 +1,48 @@
-[submodule ".vim/bundle/vim-powerline"]
-	path = .vim/bundle/vim-powerline
+[submodule "public/.vim/bundle/vim-powerline"]
+	path = public/.vim/bundle/vim-powerline
 	url = https://github.com/Lokaltog/vim-powerline.git
-[submodule ".vim/bundle/gundo"]
-	path = .vim/bundle/gundo
+[submodule "public/.vim/bundle/gundo"]
+	path = public/.vim/bundle/gundo
 	url = https://github.com/sjl/gundo.vim.git
-[submodule ".vim/bundle/tabular"]
-	path = .vim/bundle/tabular
+[submodule "public/.vim/bundle/tabular"]
+	path = public/.vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
-[submodule ".vim/bundle/vim-colors-solarized"]
-	path = .vim/bundle/vim-colors-solarized
+[submodule "public/.vim/bundle/vim-colors-solarized"]
+	path = public/.vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule ".vim/bundle/vim-fugitive"]
-	path = .vim/bundle/vim-fugitive
+[submodule "public/.vim/bundle/vim-fugitive"]
+	path = public/.vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule ".vim/bundle/vim-gnupg"]
-	path = .vim/bundle/vim-gnupg
+[submodule "public/.vim/bundle/vim-gnupg"]
+	path = public/.vim/bundle/vim-gnupg
 	url = git://gitorious.org/vim-gnupg/vim-gnupg.git
-[submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
+[submodule "public/.oh-my-zsh"]
+	path = public/.oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule ".vim/bundle/supertab"]
-	path = .vim/bundle/supertab
+[submodule "public/.vim/bundle/supertab"]
+	path = public/.vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
+[submodule "public/.vim/bundle/nerdtree"]
+	path = public/.vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule ".vim/bundle/nerdcommenter"]
-	path = .vim/bundle/nerdcommenter
+[submodule "public/.vim/bundle/nerdcommenter"]
+	path = public/.vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
-[submodule ".vim/bundle/syntastic"]
-	path = .vim/bundle/syntastic
+[submodule "public/.vim/bundle/syntastic"]
+	path = public/.vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic
-[submodule ".vim/bundle/tagbar"]
-	path = .vim/bundle/tagbar
+[submodule "public/.vim/bundle/tagbar"]
+	path = public/.vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar
-[submodule ".vim/bundle/vim-javascript"]
-	path = .vim/bundle/vim-javascript
+[submodule "public/.vim/bundle/vim-javascript"]
+	path = public/.vim/bundle/vim-javascript
 	url = git://github.com/pangloss/vim-javascript.git
-[submodule ".vim/vim-pathogen"]
-	path = .vim/vim-pathogen
+[submodule "public/.vim/vim-pathogen"]
+	path = public/.vim/vim-pathogen
 	url = git://github.com/tpope/vim-pathogen.git
-[submodule ".vim/bundle/vim-markdown"]
-	path = .vim/bundle/vim-markdown
+[submodule "public/.vim/bundle/vim-markdown"]
+	path = public/.vim/bundle/vim-markdown
 	url = git://github.com/tpope/vim-markdown.git
-[submodule ".vim/bundle/vim-latex"]
-	path = .vim/bundle/vim-latex
+[submodule "public/.vim/bundle/vim-latex"]
+	path = public/.vim/bundle/vim-latex
 	url = git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex
