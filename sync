@@ -1,11 +1,13 @@
 #!/bin/zsh
 
-# Break on first error and unset variables
+# Break on first error or unset variables
 set -e
 set -u
 
 # Gather dotfiles
-repoDir=$(pwd)
+pushd "$(dirname $0)"
+typeset -r repoDir=$(pwd)
+popd
 
 cd $repoDir/public
 publicDotfiles=(.*)
@@ -20,7 +22,7 @@ for file in $publicDotfiles $privateDotfiles; do
 done
 
 if [[ "$toBackup" != "" ]]; then
-  backupFile=$HOME/dotfiles.$(date +%Y%m%d).tar.gz
+  backupFile=$repoDir/backup/$(date +%Y%m%d).tar.gz
   tar czPf $backupFile $toBackup --remove-files
 fi
 
