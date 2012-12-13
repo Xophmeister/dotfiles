@@ -1,9 +1,6 @@
 #!/bin/zsh
 
-# Break on first error or unset variables
-# We also need zsh's extended globbing
-set -e
-set -u
+set -e -u
 setopt extendedglob
 
 # Gather dotfiles
@@ -15,7 +12,7 @@ for class in $dotClasses; do
   dotFiles=($dotFiles $repoDir/$class/.^git)
 done
 
-# Determine clashes for backup
+# Determine clashes and backup
 typeset -a toBackup
 for dotFile in $dotFiles; do
   homeFile=$HOME/$dotFile:t
