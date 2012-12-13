@@ -7,9 +7,7 @@ set -u
 setopt extendedglob
 
 # Gather dotfiles
-pushd $(dirname $0)
-typeset -r repoDir=$(pwd)
-popd
+pushd $0:h; typeset -r repoDir=$(pwd); popd
 
 dotClasses=(public private)
 typeset -a dotFiles
@@ -20,7 +18,7 @@ done
 # Determine clashes for backup
 typeset -a toBackup
 for dotFile in $dotFiles; do
-  homeFile=$HOME/$(basename $dotFile)
+  homeFile=$HOME/$dotFile:t
   if [[ -e $homeFile ]] toBackup=($toBackup $homeFile)
 done
 
@@ -30,5 +28,5 @@ fi
  
 # Create symlinks
 for dotFile in $dotFiles; do
-  ln -s $dotFile $HOME/$(basename $dotFile)
+  ln -s $dotFile $HOME/$dotFile:t
 done
