@@ -40,8 +40,6 @@ things like `.ssh`, `.gnupg`, `.gitconfig`, etc.
 * .zshrc
 * [.oh-my-zsh/](https://github.com/robbyrussell/oh-my-zsh)
 
-### GNU Screen
+### tmux 
 
-* .screenrc
-
-TODO Migrate to tmux?...
+* .tmux.conf
