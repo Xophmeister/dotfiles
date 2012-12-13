@@ -1,31 +1,31 @@
 #!/bin/zsh
 
 # Break on first error or unset variables
+# We also need zsh's extended globbing
 set -e
 set -u
 setopt extendedglob
 
 # Gather dotfiles
-pushd "$(dirname $0)"
+pushd $(dirname $0)
 typeset -r repoDir=$(pwd)
 popd
 
-dotClasses=("public" "private")
+dotClasses=(public private)
 typeset -a dotFiles
 for class in $dotClasses; do
   dotFiles=($dotFiles $repoDir/$class/.^git)
 done
 
-# Determine clashes, to backup
+# Determine clashes for backup
 typeset -a toBackup
 for dotFile in $dotFiles; do
   homeFile=$HOME/$(basename $dotFile)
   if [[ -e $homeFile ]] toBackup=($toBackup $homeFile)
 done
 
-if [[ "$toBackup" != "" ]]; then
-  backupFile=$repoDir/backup/$(date +%Y%m%d).tar.gz
-  tar czPf $backupFile $toBackup --remove-files
+if [[ -n $toBackup ]]; then
+  tar czPf $repoDir/backup/$(date +%Y%m%d).tar.gz $toBackup --remove-files
 fi
  
 # Create symlinks
