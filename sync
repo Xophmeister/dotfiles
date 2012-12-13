@@ -3,34 +3,32 @@
 # Break on first error or unset variables
 set -e
 set -u
+setopt extendedglob
 
 # Gather dotfiles
 pushd "$(dirname $0)"
 typeset -r repoDir=$(pwd)
 popd
 
-cd $repoDir/public
-publicDotfiles=(.*)
-cd $repoDir/private
-privateDotfiles=(.*)
+dotClasses=("public" "private")
+typeset -a dotFiles
+for class in $dotClasses; do
+  dotFiles=($dotFiles $repoDir/$class/.^git)
+done
 
 # Determine clashes, to backup
 typeset -a toBackup
-for file in $publicDotfiles $privateDotfiles; do
-  dotFile=$HOME/$file
-  if [[ -e $dotFile ]] toBackup=($toBackup $dotFile)
+for dotFile in $dotFiles; do
+  homeFile=$HOME/$(basename $dotFile)
+  if [[ -e $homeFile ]] toBackup=($toBackup $homeFile)
 done
 
 if [[ "$toBackup" != "" ]]; then
   backupFile=$repoDir/backup/$(date +%Y%m%d).tar.gz
   tar czPf $backupFile $toBackup --remove-files
 fi
-
+ 
 # Create symlinks
-for i in $publicDotfiles; do
-  ln -s $repoDir/public/$i $HOME/$i
-done
-
-for i in $privateDotfiles; do
-  ln -s $repoDir/private/$i $HOME/$i
+for dotFile in $dotFiles; do
+  ln -s $dotFile $HOME/$(basename $dotFile)
 done

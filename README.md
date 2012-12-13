@@ -1,23 +1,24 @@
 # Dotfiles, Oo-oo!
 
 * Install with `git clone --recursive` to also download submodules.
-* Run `./sync` to tarball any clashes before symlinking to the dotfiles
-  in the `public` and `private` directories.
+* Run `sync` to tarball any clashes in $HOME, before symlinking to the
+  dotfiles (apart from `.git`, if they exist) in `public` and `private`.
 
 ## Private Dotfiles
 
-The contents of the `private` directory is ignored by Git, but contains
-things like `.ssh`, `.gnupg`, `.gitconfig`, etc.
+`private` is symlinked to `../dotfiles-private`; clone to here for the
+private dotfiles. This contains things like `.ssh`, `.gnupg`,
+`.gitconfig`, etc.
 
 ## Public Dotfiles
 
 ### Git
 
-* .gitignore-global
+* `.gitignore-global`
 
 ### Vim
 
-* .vimrc
+* `.vimrc`
 * Plugins, etc.
   * [Gundo](http://sjl.bitbucket.org/gundo.vim/)
   * [NERDCommenter](https://github.com/scrooloose/nerdcommenter) TODO
@@ -36,10 +37,10 @@ things like `.ssh`, `.gnupg`, `.gitconfig`, etc.
 
 ### Z Shell
 
-* .zprofile
-* .zshrc
-* [.oh-my-zsh/](https://github.com/robbyrussell/oh-my-zsh)
+* `.zprofile`
+* `.zshrc`
+* [`.oh-my-zsh/`](https://github.com/robbyrussell/oh-my-zsh)
 
 ### tmux 
 
-* .tmux.conf
+* `.tmux.conf`
