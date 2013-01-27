@@ -43,3 +43,6 @@
 [submodule "public/.vim/bundle/vim-latex"]
 	path = public/.vim/bundle/vim-latex
 	url = git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex
+[submodule "public/.vim/bundle/vim-powerline"]
+	path = public/.vim/bundle/vim-powerline
+	url = git://github.com/Lokaltog/vim-powerline.git
