@@ -38,3 +38,15 @@ setopt extendedglob
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Create/attach to tmux session for SSH logins
+# TODO Close SSH session when tmux exits
+if [[ -z $TMUX && -n $SSH_TTY ]]; then
+  me=$(whoami)
+
+  if tmux has-session -t $me 2>/dev/null; then
+    exec tmux -2 attach-session -t $me
+  else
+    exec tmux -2 new-session -s $me
+  fi
+fi
