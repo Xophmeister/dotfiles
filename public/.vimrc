@@ -40,6 +40,7 @@ set cursorline
 set autoread
 set backspace=indent,eol,start
 set mouse=a
+set ttymouse=xterm2
 
 set encoding=utf-8
 set laststatus=2
