@@ -40,7 +40,6 @@ setopt extendedglob
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # Create/attach to tmux session for SSH logins
-# TODO Close SSH session when tmux exits
 if [[ -z $TMUX && -n $SSH_TTY ]]; then
   me=$(whoami)
 
@@ -50,3 +49,6 @@ if [[ -z $TMUX && -n $SSH_TTY ]]; then
     exec tmux -2 new-session -s $me
   fi
 fi
+
+# OPAM configuration
+. /home/xoph/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

@@ -49,3 +49,6 @@
 [submodule "public/.dependencies/tmux-powerline"]
 	path = public/.dependencies/tmux-powerline
 	url = git://github.com/erikw/tmux-powerline.git
+[submodule "public/.vim/bundle/vim-airline"]
+	path = public/.vim/bundle/vim-airline
+	url = http://github.com/bling/vim-airline
