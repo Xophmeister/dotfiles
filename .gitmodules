@@ -43,9 +43,6 @@
 [submodule "public/.vim/bundle/vim-latex"]
 	path = public/.vim/bundle/vim-latex
 	url = git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex
-[submodule "public/.dependencies/tmux-powerline"]
-	path = public/.dependencies/tmux-powerline
-	url = git://github.com/erikw/tmux-powerline.git
 [submodule "public/.vim/bundle/vim-airline"]
 	path = public/.vim/bundle/vim-airline
 	url = http://github.com/bling/vim-airline
