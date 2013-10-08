@@ -7,7 +7,7 @@ if has("gui_running")
   if has("gui_win32")
     set guifont=Consolas:h10:cANSI
   endif
-  
+
   set guioptions=mLrbtT
 else
   set term=screen-256color
@@ -30,7 +30,7 @@ set showcmd
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set expandtab 
+set expandtab
 set autoindent
 set smartindent
 
@@ -44,7 +44,12 @@ set ttymouse=xterm2
 
 set encoding=utf-8
 set laststatus=2
-let g:Powerline_symbols='fancy'
+
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#whitespace#enabled = 0    
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#tab_min_count = 2
 
 let g:SuperTabSetDefaultCompletionType='context'
 

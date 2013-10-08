@@ -29,7 +29,7 @@ ZSH_THEME="minimal"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git debian)
+plugins=(git debian heroku tmux node npm github cabal)
 
 source $ZSH/oh-my-zsh.sh
 
