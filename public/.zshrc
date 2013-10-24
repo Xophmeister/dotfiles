@@ -39,6 +39,12 @@ setopt extendedglob
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# OPAM configuration
+. /home/xoph/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+# Add .cabal/bin to path
+export PATH="/home/xoph/.cabal/bin:$PATH"
+
 # Create/attach to tmux session for SSH logins
 if [[ -z $TMUX && -n $SSH_TTY ]]; then
   me=$(whoami)
@@ -49,6 +55,3 @@ if [[ -z $TMUX && -n $SSH_TTY ]]; then
     exec tmux -2 new-session -s $me
   fi
 fi
-
-# OPAM configuration
-. /home/xoph/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
