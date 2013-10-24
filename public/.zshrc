@@ -43,7 +43,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 . /home/xoph/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # Add .cabal/bin to path
-export PATH="/home/xoph/.cabal/bin:$PATH"
+export PATH="$HOME/.cabal/bin:$PATH"
 
 # Create/attach to tmux session for SSH logins
 if [[ -z $TMUX && -n $SSH_TTY ]]; then
