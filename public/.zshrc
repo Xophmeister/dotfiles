@@ -45,6 +45,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Add .cabal/bin to path
 export PATH="$HOME/.cabal/bin:$PATH"
 
+# Show dirs first in ls
+alias ls='ls --group-directories-first --color=yes'
+
 # Create/attach to tmux session for SSH logins
 if [[ -z $TMUX && -n $SSH_TTY ]]; then
   me=$(whoami)
