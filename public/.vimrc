@@ -11,8 +11,6 @@ if has("gui_running")
   set guioptions=mLrbtT
 else
   set term=screen-256color
-  set t_Co=256
-  let g:solarized_termcolors=256
 endif
 
 set background=dark
