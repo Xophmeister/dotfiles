@@ -19,7 +19,8 @@ colorscheme solarized
 set number
 set nowrap
 set spell spelllang=en_gb
-set cc=72
+set tw=72
+set cc=+1
 set hlsearch
 set incsearch
 set wildmenu
