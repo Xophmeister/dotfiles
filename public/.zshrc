@@ -9,7 +9,7 @@ bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
 export KEYTIMEOUT=1
 
-plugins=(git node npm github python tmux vim-interaction sudo)
+plugins=(git github tmux vim-interaction sudo python pip cabal mix node npm)
 
 setopt extendedglob
 
@@ -20,7 +20,7 @@ source $ZSH/oh-my-zsh.sh
 
 if [[ -z $TMUX ]]; then
   sessions=$(tmux list-sessions -F "#{session_created},#S")
-  sessionCount=$(tmux list-sessions -F "${#${(f)sessions}}")
+  sessionCount=${#${(f)sessions}}
   
   if (( $sessionCount > 0 )); then
     now=$(date +%s)
