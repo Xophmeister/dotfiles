@@ -16,6 +16,9 @@ setopt extendedglob
 alias :e='vim'
 alias :q='exit'
 
+# Kill the tmux session from command line
+alias :qa='tmux kill-session -t $(tmux display-message -p "#S")'
+
 source $ZSH/oh-my-zsh.sh
 
 if [[ -z $TMUX ]]; then
