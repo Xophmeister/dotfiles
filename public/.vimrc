@@ -50,21 +50,36 @@ set modelines=5
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 
 set undodir=$HOME/.vim/undo
+set undolevels=1000
+set undoreload=10000
 set undofile
 
+set clipboard=unnamed
+
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#whitespace#enabled = 0    
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#tab_min_count = 2
 
-let g:SuperTabSetDefaultCompletionType='context'
+filetype plugin on
+
+let g:SuperTabSetDefaultCompletionType= "context"
+set omnifunc=syntaxcomplete#Complete
+set tags+=$HOME/.vim/systags
 
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
-filetype plugin on
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_c_check_header = 1
 
 if has("python")
   nnoremap <F11> :GundoToggle<CR>
