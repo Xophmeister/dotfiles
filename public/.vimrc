@@ -67,9 +67,8 @@ let g:airline#extensions#tabline#tab_min_count = 2
 
 filetype plugin on
 
-let g:SuperTabSetDefaultCompletionType= "context"
+let g:SuperTabSetDefaultCompletionType = "context"
 set omnifunc=syntaxcomplete#Complete
-set tags+=$HOME/.vim/systags
 
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
