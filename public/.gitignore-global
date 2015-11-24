@@ -1,4 +1,4 @@
-# Created by https://www.gitignore.io/api/vim,c,python
+# Created by https://www.gitignore.io/api/vim,c,haskell,python
 
 ### Vim ###
 [._]*.s[a-w][a-z]
@@ -42,6 +42,25 @@ Session.vim
 
 # Debug files
 *.dSYM/
+
+
+### Haskell ###
+dist
+cabal-dev
+*.o
+*.hi
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+.hpc
+.hsenv
+.cabal-sandbox/
+cabal.sandbox.config
+*.prof
+*.aux
+*.hp
+.stack-work/
 
 
 ### Python ###
