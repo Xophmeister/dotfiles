@@ -69,6 +69,26 @@ Session.vim
 # Debug files
 *.dSYM/
 
+
+### Haskell ###
+dist
+cabal-dev
+*.o
+*.hi
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+.hpc
+.hsenv
+.cabal-sandbox/
+cabal.sandbox.config
+*.prof
+*.aux
+*.hp
+.stack-work/
+
+
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -129,5 +149,5 @@ docs/_build/
 # PyBuilder
 target/
 
-# Virtual environment
+# Virtualenv
 venv/

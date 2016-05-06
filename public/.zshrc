@@ -43,7 +43,7 @@ alias :qa='tmux kill-session -t $(tmux display-message -p "#S")'
 # Because I'm sick of typing this
 alias ldap='ldapsearch -xLLL'
 
-plugins=(git node npm github docker brew python pip tmux osx sudo 3e zsh-autosuggestions)
+plugins=(git node npm cabal mix vim-interaction github docker brew python pip tmux osx sudo 3e zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 if [[ -z $TMUX ]]; then
