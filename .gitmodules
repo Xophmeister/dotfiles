@@ -73,3 +73,6 @@
 [submodule "public/.vim/bundle/vim-elixir"]
 	path = public/.vim/bundle/vim-elixir
 	url = https://github.com/elixir-lang/vim-elixir.git
+[submodule "public/.vim/bundle/vim-airline-themes"]
+	path = public/.vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
