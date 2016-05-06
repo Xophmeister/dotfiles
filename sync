@@ -6,7 +6,7 @@ setopt extendedglob
 # Gather dotfiles
 pushd $0:h; typeset -r repoDir=$(pwd); popd
 
-dotClasses=(public private)
+dotClasses=(public)
 typeset -a dotFiles
 for class in $dotClasses; do
   dotFiles=($dotFiles $repoDir/$class/.^git)
@@ -19,9 +19,10 @@ for dotFile in $dotFiles; do
   if [[ -e $homeFile ]] toBackup=($toBackup $homeFile)
 done
 
-if [[ -n $toBackup ]]; then
-  tar czPf $repoDir/backup/$(date +%Y%m%d).tar.gz $toBackup --remove-files
-fi
+# FIXME This is specific to GNU tar
+# if [[ -n $toBackup ]]; then
+#   tar czPf $repoDir/backup/$(date +%Y%m%d).tar.gz $toBackup --remove-files
+# fi
  
 # Create symlinks
 for dotFile in $dotFiles; do
