@@ -19,8 +19,6 @@ export PKG_CONFIG_PATH=$HOME/local/lib/pkgconfig:/usr/local/lib/pkgconfig
 
 export SHELLCHECK_OPTS="-e SC2155"
 
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
-
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="minimal"
 DISABLE_UPDATE_PROMPT=true
@@ -45,6 +43,7 @@ alias ldap='ldapsearch -xLLL'
 
 plugins=(git node npm cabal mix vim-interaction github docker brew python pip tmux osx sudo 3e zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
 
 if [[ -z $TMUX ]]; then
   sessions=$(tmux list-sessions -F "#{session_created},#S")
