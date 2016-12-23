@@ -41,12 +41,12 @@ alias :qa='tmux kill-session -t $(tmux display-message -p "#S")'
 # Because I'm sick of typing this
 alias ldap='ldapsearch -xLLL'
 
-plugins=(git node npm cabal mix vim-interaction github docker brew python pip tmux osx sudo 3e zsh-autosuggestions)
+plugins=(git node npm cabal mix vim-interaction github docker brew python pip tmux osx sudo zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
 
 if [[ -z $TMUX ]]; then
-  sessions=$(tmux list-sessions -F "#{session_created},#S")
+  sessions=$(tmux list-sessions -F "#{session_created},#S" 2>/dev/null)
   sessionCount=${#${(f)sessions}}
   
   if (( $sessionCount > 0 )); then
@@ -77,6 +77,6 @@ if [[ -z $TMUX ]]; then
     # Default session
     choice=$(whoami)
   fi
-
+  
   exec tmux -2 new-session -A -s $choice
 fi
