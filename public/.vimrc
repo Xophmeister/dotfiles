@@ -80,10 +80,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
 
-let g:syntastic_c_check_header = 1
-let g:syntastic_sh_checkers = ['shellcheck']
-let g:syntastic_python_checkers = ['pylint', 'mypy']
-
 if has("python")
   nnoremap <F11> :GundoToggle<CR>
 endif
