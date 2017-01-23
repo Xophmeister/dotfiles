@@ -76,3 +76,6 @@
 [submodule "public/.vim/bundle/vim-airline-themes"]
 	path = public/.vim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "public/.vim/bundle/vim-loves-dafny"]
+	path = public/.vim/bundle/vim-loves-dafny
+	url = https://github.com/mlr-msft/vim-loves-dafny.git
