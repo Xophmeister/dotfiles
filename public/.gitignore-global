@@ -150,4 +150,4 @@ docs/_build/
 target/
 
 # Virtualenv
-venv/
+*venv/
