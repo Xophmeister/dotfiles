@@ -19,9 +19,6 @@
 [submodule "public/.vim/bundle/supertab"]
 	path = public/.vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "public/.vim/bundle/nerdtree"]
-	path = public/.vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule "public/.vim/bundle/nerdcommenter"]
 	path = public/.vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
@@ -46,21 +43,9 @@
 [submodule "public/.vim/bundle/vim-airline"]
 	path = public/.vim/bundle/vim-airline
 	url = http://github.com/bling/vim-airline
-[submodule "public/.vim/bundle/vim-coffee-script"]
-	path = public/.vim/bundle/vim-coffee-script
-	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "public/.vim/bundle/vim-go"]
 	path = public/.vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
-[submodule "public/.vim/bundle/vim-spacebars"]
-	path = public/.vim/bundle/vim-spacebars
-	url = https://github.com/Slava/vim-spacebars.git
-[submodule "public/.vim/bundle/vim-jade"]
-	path = public/.vim/bundle/vim-jade
-	url = git://github.com/digitaltoad/vim-jade.git
-[submodule "public/.vim/bundle/vim-stylus"]
-	path = public/.vim/bundle/vim-stylus
-	url = git://github.com/wavded/vim-stylus.git
 [submodule "public/.vim/bundle/Dockerfile"]
 	path = public/.vim/bundle/Dockerfile
 	url = https://github.com/ekalinin/Dockerfile.vim.git
@@ -76,6 +61,12 @@
 [submodule "public/.vim/bundle/vim-airline-themes"]
 	path = public/.vim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
-[submodule "public/.vim/bundle/vim-loves-dafny"]
-	path = public/.vim/bundle/vim-loves-dafny
-	url = https://github.com/mlr-msft/vim-loves-dafny.git
+[submodule "public/.vim/bundle/vim-zsh-path-completion"]
+	path = public/.vim/bundle/vim-zsh-path-completion
+	url = https://github.com/fweep/vim-zsh-path-completion.git
+[submodule "public/.vim/bundle/vim-erlang-compiler"]
+	path = public/.vim/bundle/vim-erlang-compiler
+	url = https://github.com/vim-erlang/vim-erlang-compiler.git
+[submodule "public/.vim/bundle/vim-erlang-omnicomplete"]
+	path = public/.vim/bundle/vim-erlang-omnicomplete
+	url = https://github.com/vim-erlang/vim-erlang-omnicomplete.git
