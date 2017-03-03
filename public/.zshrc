@@ -34,6 +34,7 @@ setopt extendedglob
 
 alias :e='vim'
 alias :q='exit'
+alias exti='exit'
 
 # Kill the session from command line
 alias :qa='tmux kill-session -t $(tmux display-message -p "#S")'
