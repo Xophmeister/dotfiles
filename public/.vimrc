@@ -21,6 +21,7 @@ set nowrap
 set spell spelllang=en_gb
 set tw=72
 set cc=+1
+set formatoptions=croqlj
 set hlsearch
 set incsearch
 set wildmenu
@@ -71,6 +72,8 @@ let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
+let mapleader = ","
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -83,6 +86,3 @@ let g:syntastic_aggregate_errors = 1
 if has("python")
   nnoremap <F11> :GundoToggle<CR>
 endif
-
-let g:NERDTreeMinimalUI=1
-nnoremap <F12> :NERDTreeToggle<CR>
