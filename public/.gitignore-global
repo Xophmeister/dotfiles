@@ -149,5 +149,5 @@ docs/_build/
 # PyBuilder
 target/
 
-# Virtualenv
 *venv/
+.mypy_cache/
