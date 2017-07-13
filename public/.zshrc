@@ -43,7 +43,7 @@ alias ldap='ldapsearch -xLLL'
 # Hee hee :)
 alias cat='lolcat'
 
-plugins=(git node npm cabal mix vim-interaction github docker brew python pip tmux osx sudo zsh-autosuggestions)
+plugins=(git node npm cabal mix vim-interaction github docker brew python pip tmux osx sudo zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
 
