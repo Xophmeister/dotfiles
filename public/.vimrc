@@ -59,7 +59,7 @@ set clipboard=unnamed
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tagbar#enabled = 1
-let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#whitespace#enabled = 0    
 let g:airline#extensions#tabline#enabled = 1
@@ -73,15 +73,6 @@ let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
 let mapleader = ","
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_aggregate_errors = 1
 
 if has("python")
   nnoremap <F11> :GundoToggle<CR>
