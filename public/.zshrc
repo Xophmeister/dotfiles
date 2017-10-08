@@ -38,7 +38,9 @@ alias exti='exit'
 alias :qa='tmux kill-session -t $(tmux display-message -p "#S")'
 
 # Because I'm sick of typing this
-alias ldap='ldapsearch -xLLL'
+ldap() {
+  ldapsearch -xLLL $@ | ldif2json | jq .
+}
 
 # Hee hee :)
 alias cat='lolcat'
