@@ -73,3 +73,6 @@
 [submodule "public/.vim/bundle/ale"]
 	path = public/.vim/bundle/ale
 	url = https://github.com/w0rp/ale.git
+[submodule "public/.vim/bundle/vim-jinja2-syntax"]
+	path = public/.vim/bundle/vim-jinja2-syntax
+	url = https://github.com/Glench/Vim-Jinja2-Syntax.git
