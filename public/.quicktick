@@ -1,0 +1,10 @@
+[ticker]
+crypto = BTC
+fiat = GBP
+
+[formatter]
+template = {fiat}/{crypto} {rate:.2f} {change}%%#[fg=colour3]
+up_template = #[fg=colour106]▲ {change}
+stable_template = 0.00
+down_template = #[fg=colour160]▼ {change}
+failure = Couldn't get data
