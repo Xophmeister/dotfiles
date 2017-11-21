@@ -4,7 +4,7 @@ fiat = GBP
 
 [formatter]
 template = {fiat}/{crypto} {rate:.2f} {change}%%#[fg=colour3]
-up_template = #[fg=colour106]▲ {change}
+up_template = #[fg=colour106]▲ {change:.2f}
 stable_template = 0.00
-down_template = #[fg=colour160]▼ {change}
+down_template = #[fg=colour160]▼ {change:.2f}
 failure = Couldn't get data
