@@ -77,3 +77,6 @@ let mapleader = ","
 if has("python")
   nnoremap <F11> :GundoToggle<CR>
 endif
+
+" Remove wrapping for Python "requirements.txt" files
+autocmd BufRead,BufNewFile requirements.txt setlocal formatoptions=croj
