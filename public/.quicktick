@@ -1,10 +1,40 @@
-[ticker]
-crypto = BTC
-fiat = GBP
+ticker:
+  source: coinmarketcap
+  crypto: BTC
+  fiat: GBP
+  template: tmux
 
-[formatter]
-template = {fiat}/{crypto} {rate:.2f} {change}%%#[fg=colour3]
-up_template = #[fg=colour106]▲ {change:.2f}
-stable_template = 0.00
-down_template = #[fg=colour160]▼ {change:.2f}
-failure = Couldn't get data
+templates:
+  tty: >
+    {{ fiat.symbol }}/{{ crypto.symbol }}
+    {{ rate | float | round(2) }}
+    ({{ change | float | round(2) }}%)
+
+  tmux: >
+    {{ fiat.symbol }}/{{ crypto.symbol }}
+    {{ rate | float | round(2) }}
+    {% if (change | float) > 0 %}#[fg=colour106]{{ "\u25b2" }}
+    {% elif (change | float) < 0 %}#[fg=colour160]{{ "\u25bc" }}
+    {% else %}{{ "\u2218" }}
+    {% endif %}{{ change | float | abs | round(2) }}%#[fg=colour3]
+
+sources:
+  coinmarketcap:
+    url: https://api.coinmarketcap.com/v1/ticker/{{ crypto["api_path"] }}/?convert={{ fiat.symbol }}
+
+    data:
+      rate: >
+        {{ json[0]["price_" + ( fiat.symbol | lower )] }}
+      change: >
+        {{ json[0]["percent_change_1h"] }}
+
+    cryptos:
+      BTC:
+        api_path: bitcoin
+      ETH:
+        api_path: ethereum
+
+    fiats:
+      EUR: {}
+      GBP: {}
+      USD: {}
