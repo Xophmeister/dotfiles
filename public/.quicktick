@@ -7,16 +7,16 @@ ticker:
 templates:
   tty: >
     {{ fiat.symbol }}/{{ crypto.symbol }}
-    {{ rate | float | round(2) }}
-    ({{ change | float | round(2) }}%)
+    {{ "%.2f" | format(rate | float) }}
+    ({{ "%.2f" | format(change | float) }}%)
 
   tmux: >
     {{ fiat.symbol }}/{{ crypto.symbol }}
-    {{ rate | float | round(2) }}
+    {{ "%.2f" | format(rate | float) }}
     {% if (change | float) > 0 %}#[fg=colour106]{{ "\u25b2" }}
     {% elif (change | float) < 0 %}#[fg=colour160]{{ "\u25bc" }}
     {% else %}{{ "\u2218" }}
-    {% endif %}{{ change | float | abs | round(2) }}%#[fg=colour3]
+    {% endif %}{{ "%.2f" | format(change | float | abs) }}%#[fg=colour3]
 
 sources:
   coinmarketcap:
