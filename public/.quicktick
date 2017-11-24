@@ -1,3 +1,4 @@
+---
 ticker:
   source: coinmarketcap
   crypto: BTC
@@ -6,12 +7,12 @@ ticker:
 
 templates:
   tty: >
-    {{ fiat.symbol }}/{{ crypto.symbol }}
+    {{ fiat }}/{{ crypto }}
     {{ "%.2f" | format(rate | float) }}
     ({{ "%.2f" | format(change | float) }}%)
 
   tmux: >
-    {{ fiat.symbol }}/{{ crypto.symbol }}
+    {{ fiat }}/{{ crypto }}
     {{ "%.2f" | format(rate | float) }}
     {% if (change | float) > 0 %}#[fg=colour106]{{ "\u25b2" }}
     {% elif (change | float) < 0 %}#[fg=colour160]{{ "\u25bc" }}
@@ -20,11 +21,11 @@ templates:
 
 sources:
   coinmarketcap:
-    url: https://api.coinmarketcap.com/v1/ticker/{{ crypto["api_path"] }}/?convert={{ fiat.symbol }}
+    url: https://api.coinmarketcap.com/v1/ticker/{{ crypto["api_path"] }}/?convert={{ fiat }}
 
     data:
       rate: >
-        {{ json[0]["price_" + ( fiat.symbol | lower )] }}
+        {{ json[0]["price_" + ( fiat | lower )] }}
       change: >
         {{ json[0]["percent_change_1h"] }}
 
