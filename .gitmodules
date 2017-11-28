@@ -76,3 +76,6 @@
 [submodule "public/.vim/bundle/vim-jinja2-syntax"]
 	path = public/.vim/bundle/vim-jinja2-syntax
 	url = https://github.com/Glench/Vim-Jinja2-Syntax.git
+[submodule "public/.vim/bundle/vim-in-proportion"]
+	path = public/.vim/bundle/vim-in-proportion
+	url = https://github.com/drzel/vim-in-proportion.git
