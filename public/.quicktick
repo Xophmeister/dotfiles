@@ -19,6 +19,10 @@ templates:
     {% else %}{{ "\u2218" }}
     {% endif %}{{ "%.2f" | format(change | float | abs) }}%#[fg=colour3]
 
+  gdax: >
+    {{ fiat }}/{{ crypto }}
+    {{ "%.2f" | format(price | float) }}
+
 sources:
   coinmarketcap:
     url: https://api.coinmarketcap.com/v1/ticker/{{ crypto["api_path"] }}/?convert={{ fiat }}
@@ -39,3 +43,19 @@ sources:
       EUR: {}
       GBP: {}
       USD: {}
+
+  gdax:
+    url: https://api.gdax.com/products/{{ crypto }}-{{ fiat }}/ticker
+
+    data:
+      price: "{{ json.price }}"
+
+    cryptos:
+      BTC: {}
+      ETH: {}
+      LTC: {}
+
+    fiats:
+      USD: {}
+      EUR: {}
+      GBP: {}
