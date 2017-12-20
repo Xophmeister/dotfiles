@@ -5,3 +5,5 @@ if (exists("$VIRTUAL_ENV"))
 endif
 
 setlocal keywordprg=pydoc
+
+let g:ale_virtualenv_dir_names = [".venv", "venv"]
