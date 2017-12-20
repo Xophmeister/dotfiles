@@ -38,6 +38,8 @@ sources:
         api_path: bitcoin
       ETH:
         api_path: ethereum
+      LTC:
+        api_path: litecoin
 
     fiats:
       EUR: {}
