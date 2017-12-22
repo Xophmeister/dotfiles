@@ -80,3 +80,6 @@ endif
 
 " Remove wrapping for Python "requirements.txt" files
 autocmd BufRead,BufNewFile requirements.txt setlocal formatoptions=croj
+
+set listchars=tab:→\ ,trail:·
+set list
