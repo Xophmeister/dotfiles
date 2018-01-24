@@ -40,6 +40,8 @@ sources:
         api_path: ethereum
       LTC:
         api_path: litecoin
+      XRP:
+        api_path: ripple
 
     fiats:
       EUR: {}
