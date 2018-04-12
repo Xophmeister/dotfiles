@@ -40,9 +40,26 @@ alias :qa='tmux kill-session -t $(tmux display-message -p "#S")'
 # Hee hee :)
 alias cat='lolcat'
 
-plugins=(git node npm cabal mix vim-interaction github docker brew python pip tmux osx sudo zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git node npm cabal mix vim-interaction github docker brew python pip tmux osx zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+ZSH_HIGHLIGHT_PATTERNS+=('\#*' 'fg=10')
+
+# Toggle commented command line on double Escape
+comment-command-line() {
+  [[ -z $BUFFER ]] && zle up-history
+  if [[ $BUFFER =~ ^#+ ]]; then
+    LBUFFER="$(sed -E 's/^#+ *//' <<< "$LBUFFER")"
+  else
+    LBUFFER="# $BUFFER"
+  fi
+}
+zle -N comment-command-line
+bindkey "\e\e" comment-command-line
+# FIXME This doesn't do what I think it should :P
+#ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(comment-command-line)
+#ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS+=(comment-command-line)
 
 if [[ -z $TMUX ]]; then
   sessions=$(tmux list-sessions -F "#{session_created},#S" 2>/dev/null)
