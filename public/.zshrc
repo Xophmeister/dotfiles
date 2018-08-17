@@ -1,13 +1,15 @@
 export TERM='screen-256color'
 
-PATH=$HOME/local/bin:$PATH
 PATH=/usr/local/bin:$PATH
+PATH=$HOME/local/bin:$PATH
 PATH=$PATH:/usr/games/bin
 PATH=$PATH:$HOME/Library/Haskell/bin
+PATH=$PATH:$HOME/perl5/bin
 PATH=/usr/local/git/bin:$PATH
 export PATH
 
-PATH="/Users/ch12/perl5/bin${PATH+:}${PATH}"; export PATH;
+export MANPATH
+
 PERL5LIB="/Users/ch12/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/Users/ch12/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/Users/ch12/perl5\""; export PERL_MB_OPT;
