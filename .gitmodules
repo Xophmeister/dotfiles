@@ -79,3 +79,6 @@
 [submodule "public/.vim/bundle/vim-in-proportion"]
 	path = public/.vim/bundle/vim-in-proportion
 	url = https://github.com/drzel/vim-in-proportion.git
+[submodule "public/.vim/bundle/vim-vue"]
+	path = public/.vim/bundle/vim-vue
+	url = https://github.com/posva/vim-vue.git
