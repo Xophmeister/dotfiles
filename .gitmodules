@@ -79,3 +79,6 @@
 [submodule "public/.vim/bundle/vim-vue"]
 	path = public/.vim/bundle/vim-vue
 	url = https://github.com/posva/vim-vue.git
+[submodule "public/.vim/bundle/vim-wdl"]
+	path = public/.vim/bundle/vim-wdl
+	url = https://github.com/broadinstitute/vim-wdl.git
