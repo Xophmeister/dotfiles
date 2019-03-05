@@ -42,6 +42,8 @@ alias :qa='tmux kill-session -t $(tmux display-message -p "#S")'
 # Hee hee :)
 alias cat='lolcat'
 
+alias hgv="hg --ssh -t ssh"
+
 plugins=(git node npm cabal mix vim-interaction github docker brew python pip tmux osx zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
