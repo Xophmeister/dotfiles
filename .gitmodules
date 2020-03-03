@@ -82,3 +82,9 @@
 [submodule "public/.vim/bundle/vim-wdl"]
 	path = public/.vim/bundle/vim-wdl
 	url = https://github.com/broadinstitute/vim-wdl.git
+[submodule "public/.vim/bundle/vim-singularity-syntax"]
+	path = public/.vim/bundle/vim-singularity-syntax
+	url = https://github.com/rbberger/vim-singularity-syntax.git
+[submodule "public/.vim/bundle/vim-terraform"]
+	path = public/.vim/bundle/vim-terraform
+	url = https://github.com/hashivim/vim-terraform.git

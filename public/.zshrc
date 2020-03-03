@@ -43,6 +43,7 @@ alias :qa='tmux kill-session -t $(tmux display-message -p "#S")'
 alias cat='lolcat'
 
 alias hgv="hg --ssh -t ssh"
+alias openrc="source ~ch12/Projects/openstack/api.rc"
 
 plugins=(git node npm cabal mix vim-interaction github docker brew python pip tmux osx zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
