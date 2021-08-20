@@ -88,3 +88,9 @@
 [submodule "public/.vim/bundle/vim-terraform"]
 	path = public/.vim/bundle/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
+[submodule "public/.vim/bundle/vim-pollen"]
+	path = public/.vim/bundle/vim-pollen
+	url = https://github.com/otherjoel/vim-pollen.git
+[submodule "public/.vim/bundle/vim-nix"]
+	path = public/.vim/bundle/vim-nix
+	url = https://github.com/LnL7/vim-nix.git

@@ -42,9 +42,6 @@ alias :qa='tmux kill-session -t $(tmux display-message -p "#S")'
 # Hee hee :)
 alias cat='lolcat'
 
-alias hgv="hg --ssh -t ssh"
-alias openrc="source ~ch12/Projects/openstack/api.rc"
-
 plugins=(git node npm cabal mix vim-interaction github docker brew python pip tmux osx zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
@@ -65,6 +62,16 @@ bindkey "\e\e" comment-command-line
 # FIXME This doesn't do what I think it should :P
 #ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(comment-command-line)
 #ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS+=(comment-command-line)
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  export PYENV_ROOT="${HOME}/.pyenv"
+  export PATH="${PYENV_ROOT}/bin:${PATH}"
+  eval "$(pyenv init --path)"
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
+
+source "$HOME/.cargo/env"
 
 if [[ -z $TMUX ]]; then
   sessions=$(tmux list-sessions -F "#{session_created},#S" 2>/dev/null)

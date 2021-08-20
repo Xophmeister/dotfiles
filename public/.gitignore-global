@@ -151,3 +151,11 @@ target/
 
 *venv/
 .mypy_cache/
+.python-version
+
+packer_cache
+*.tfstate
+*.tfstate.backup
+*.tfstate.d
+.terraform
+.terraform.lock.hcl
